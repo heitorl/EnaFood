@@ -1,3 +1,4 @@
+import res from "express/lib/response";
 import { Products, Restaurants } from "../models";
 import {
   getAllProductSchema,

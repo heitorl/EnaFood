@@ -32,7 +32,7 @@ class UserService {
       {
         email: foundUser.email,
         _id: foundUser._id,
-        isAdmin: foundUser.isAdmin,
+        isAdmin: foundUser.isOwner,
       },
       process.env.SECRET_KEY,
       {

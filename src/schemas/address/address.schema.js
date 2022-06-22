@@ -15,7 +15,7 @@ const serializedCreateAddressSchema = yup.object().shape({
     _id: yup.string().required(),
     name: yup.string().required(),
     email: yup.string().email().required(),
-    isAdmin: yup.boolean().required(),
+    isOwner: yup.boolean().required(),
   }),
 });
 

@@ -5,6 +5,7 @@ const getAllProductSchema = yup.array().of(
     name: yup.string(),
     price: yup.number().positive().required(),
     available: yup.bool(),
+    quantityInStock: yup.number().positive(),
     restaurant: yup.object().shape({
       _id: yup.string(),
     }),

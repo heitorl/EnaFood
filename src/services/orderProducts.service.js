@@ -27,6 +27,11 @@ class OrderProductService {
       orderProducts,
     });
 
+    order.quantity = orderProducts.quantity;
+    order.price = products.price;
+    order.save();
+    console.log(order);
+
     orderProducts.order = order._id;
     orderProducts.save();
 

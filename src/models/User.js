@@ -13,7 +13,7 @@ export const User = mongoose.model("User", {
     type: String,
     required: true,
   },
-  isAdmin: {
+  isOwner: {
     type: Boolean,
     default: false,
   },

@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { restaurantController } from "../controllers";
-import isAdmin from "../middlewares/isAdmin.middleware";
+import { isOwner } from "../middlewares";
 import validateSchema from "../middlewares/validateSchema.middleware";
 import verifyToken from "../middlewares/verifyToken.middleware";
 import { createRestaurantSchema } from "../schemas";
@@ -10,7 +10,7 @@ restaurantRouter.post(
   "/register",
   validateSchema(createRestaurantSchema),
   verifyToken,
-  isAdmin,
+  isOwner,
   restaurantController.createRestaurant
 );
 
